@@ -10,8 +10,10 @@
   <%= f.label :genre_id %>
   <%= f.collection_select :genre_id, Genre.all, :id, :name %><br>
 
-  <% 3.times do %>
-    <%= f.text_field :notes, multiple: true %><br>
+  <%= f.label :notes %>
+  <%= f.text_field :notes, multiple: true %><br>
+  <%= f.text_field :notes, multiple: true %><br>
+  <%= f.text_field :notes, multiple: true %><br>
 
   <%= f.submit %>
 <% end %>
