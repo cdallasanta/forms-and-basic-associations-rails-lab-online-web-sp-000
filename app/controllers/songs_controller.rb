@@ -16,8 +16,6 @@ class SongsController < ApplicationController
     @song.artist_name = song_params[:artist_name]
     @song.genre_id = song_params[:genre_id]
     song_params[:notes].each do |note|
-
-        binding.pry
       @song.notes << Note.create(content: note)
     end
 
