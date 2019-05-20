@@ -33,6 +33,7 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents=(new_content)
+    binding.pry
     new_content.each do |new_note|
       self.notes << Note.create(content: new_note)
     end
