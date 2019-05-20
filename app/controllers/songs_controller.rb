@@ -19,6 +19,8 @@ class SongsController < ApplicationController
       @song.notes << Note.create(content: note)
     end
 
+    binding.pry
+
     if @song.save
       redirect_to @song
     else
